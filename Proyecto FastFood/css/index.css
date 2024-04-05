@@ -72,3 +72,45 @@ body {
 .footer span {
   color: #f8f9fa;
 }
+/* Estilos para el carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -40px;
+}
+
+.carousel-control-next {
+  right: -40px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  border: none;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('path/to/your/prev-icon.png'); /* Reemplaza 'path/to/your/prev-icon.png' con la ruta de tu icono prev personalizado */
+  background-size: cover;
+}
+
+.carousel-control-prev-icon::before {
+  transform: rotate(180deg);
+}

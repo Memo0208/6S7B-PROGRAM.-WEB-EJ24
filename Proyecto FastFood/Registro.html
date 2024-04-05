@@ -2,70 +2,32 @@
 <html>
 <head>
     <title>Registration Form</title>
-    <style>
-        .form-container {
-            width: 300px;
-            padding: 16px;
-            background-color: white;
-            margin: 0 auto;
-            margin-top: 100px;
-            border: 5px solid rgba(146, 146, 146, 5);
-            border-radius: 4px;
-            border-color: #979797;
-        }
-        .form-container input[type="text"],
-        .form-container input[type="email"],
-        .form-container input[type="password"] {
-            width: 90%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            border: none;
-            background: #f1f1f1;
-        }
-        .form-container input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-        .form-container input[type="submit"]:hover {
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="css/Registro.css"> <!-- Cambiado el href -->
 </head>
 <body>
     <div class="form-container">
         <form action="login.html" method="post">
-            <label for="fname">Nombre</label>
+            <label for="fname">Nombre Completo:</label>
             <input type="text" id="fname" name="firstname" placeholder="Nombre.." required>
 
-            <label for="lname">Apellido</label>
-            <input type="text" id="lname" name="lastname" placeholder="Apellido.." required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico.." required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Correo electronico.." required>
-
-            <label for="pwd">Contraseña</label>
+            <label for="pwd">Contraseña:</label>
             <input type="password" id="pwd" name="password" placeholder="Contraseña.." required>
 
-            <label for="pwd-repeat">Repetir contraseña</label>
+            <label for="pwd-repeat">Repetir contraseña:</label>
             <input type="password" id="pwd-repeat" name="password-repeat" placeholder="Repetir Contraseña.." required>
 
-            <label for="fname">Tu direccion</label>
-            <input type="text" id="direccion" name="fdireccion" placeholder="Tu direccion" required>
+            <input type="submit" value="Registrar">
+    <button onclick="window.history.back()">Regresar</button>
 
-            <input  type="submit" value="Registrar" >
-            
         </form>
     </div>
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
             if (document.getElementById('pwd').value !== document.getElementById('pwd-repeat').value) {
-                alert('Passwords do not match');
+                alert('Las contraseñas no coinciden');
                 event.preventDefault();
             }
         });
